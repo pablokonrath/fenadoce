@@ -1,0 +1,110 @@
+.top-3{
+  max-width: 1400px;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.card__item{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  flex-wrap: wrap;
+}
+.card__item span {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card__item.card__item--primeiro span{
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.card__item h2{
+  font-size: 24px;
+  margin: 10px 0;
+  color: #388d5d;
+}
+
+
+.avatar{
+  height: 150px;
+  width: 150px;
+  border: 4px solid #5a431b;
+  border-radius: 75px;
+  overflow: hidden;
+}
+
+.avatar img{
+  width: 100%;
+  height: 100%;
+}
+.card__item.card__item--primeiro span::after{
+  content: "";
+  background-image: url(/public/coroa.png);
+  background-position: center;
+  background-size: cover;
+  display: block;
+  bottom: -80px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.card__item p {
+  font-size: 24px;
+  color: #d6a34a;
+  font-weight: bold;
+}
+.card__item--primeiro{
+  align-self: flex-start;
+}
+
+/* Card de uma lista por ordem voto do maior ao menor */
+
+.classificacao-geral {
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #d6a34a;
+
+}
+.classificacao-geral span, .classificacao-geral p  {
+  width: 70px;
+}
+.classificacao-geral .card__item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px 30px;
+  width: 800px;
+  background-color: #5a431b;
+  border-radius: 8px;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.classificacao-geral .card__item h2{
+width: 300px;
+}
+.classificacao-geral .avatar{
+  height: 50px;
+  width: 50px;
+  border: 2px solid #5a431b;
+  border-radius: 75px;
+  overflow: hidden;
+}
+.classificacao-geral .avatar img{
+ width: 100%;
+}

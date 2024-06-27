@@ -1,0 +1,98 @@
+[
+  {
+    "nome": "Ana Carolina Silva",
+    "clube": "Brilhante",
+    "idade": 26,
+    "foto": "https://static.vecteezy.com/ti/fotos-gratis/t1/11976866-sorridente-mulher-brasileira-latina-na-fazenda-alegria-positivo-e-amor-foto.jpg",
+    "votos": 120,
+    "emails": []
+  },
+  {
+    "nome": "Mariana Oliveira",
+    "clube": "Brilhante",
+    "idade": 24,
+    "foto": "https://img.freepik.com/fotos-gratis/retrato-de-mulher-sorridente-em-ao-ar-livre_23-2147907068.jpg?size=338&ext=jpg&ga=GA1.1.2116175301.1719187200&semt=ais_user",
+    "votos": 98,
+    "emails": []
+  },
+  {
+    "nome": "Beatriz Santos",
+    "clube": "Dunas Clube",
+    "idade": 27,
+    "foto": "https://areademulher.r7.com/wp-content/uploads/2022/02/o-que-aprender-com-8-mulheres-que-ficaram-milionarias-antes-dos-30-anos-1200x900.jpeg",
+    "votos": 145,
+    "emails": []
+  },
+  {
+    "nome": "Carla Souza",
+    "clube": "Dunas Clube",
+    "idade": 25,
+    "foto": "https://i.pinimg.com/736x/cc/52/84/cc52841021e6290b469db0ea7fd0dc22.jpg",
+    "votos": 75,
+    "emails": []
+  },
+  {
+    "nome": "Isabela Ferreira",
+    "clube": "Caixeiral",
+    "idade": 23,
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRybGUyNMzhhXgu0PdmWGatjlrjiANwTC8dqIXoCPK6kroQtps6cm13HB1VrYoTlt_O0G0&usqp=CAU",
+    "votos": 110,
+    "emails": []
+  },
+  {
+    "nome": "Gabriela Lima",
+    "clube": "Caixeiral",
+    "idade": 28,
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8CqkdNyrjcPjq3muIgJ156RBLJ4-9BbRYVuACkgLv7cAp3DD2NuW9YoT8y-jg9suVW4&usqp=CAU",
+    "votos": 88,
+    "emails": []
+  },
+  {
+    "nome": "Patrícia Vieira",
+    "clube": "15 de Julho",
+    "idade": 24,
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK8nouqQx9Zrp_Bzk0kp5xAtfbGyKEMWTTZ7jQQIZ5pabTR9R2tbNKTuI9BOsWl54Wiro&usqp=CAU",
+    "votos": 102,
+    "emails": []
+  },
+  {
+    "nome": "Camila Almeida",
+    "clube": "15 de Julho",
+    "idade": 29,
+    "foto": "https://st2.depositphotos.com/2015659/6442/i/450/depositphotos_64425317-stock-photo-beautiful-woman-smiling-in-a.jpg",
+    "votos": 93,
+    "emails": []
+  },
+  {
+    "nome": "Fernanda Costa",
+    "clube": "Centro Português",
+    "idade": 21,
+    "foto": "https://img.freepik.com/fotos-gratis/closeup-retrato-da-bela-modelo-moreno-sorridente-mulher-na-moda-posando-na-rua-ao-por-do-sol-bonita-e-alegre_158538-17039.jpg",
+    "votos": 80,
+    "emails": []
+  },
+  {
+    "nome": "Vanessa Pereira",
+    "clube": "Centro Português",
+    "idade": 30,
+    "foto": "https://img.freepik.com/fotos-gratis/mulher-jovem-atraente-confiante-e-carismatica-com-longos-cabelos-cacheados-usa-blusa-azul-sorri-dentucos-e-parece-sincera-com-uma-expressao-autoconfiante-e-encorajada_176420-37638.jpg",
+    "votos": 115,
+    "emails": []
+  },
+  {
+    "nome": "Mariana Silva",
+    "clube": "Gonzaga",
+    "idade": "17",
+    "foto": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "votos": 0,
+    "emails": []
+  },
+  {
+    "nome": "Priscila",
+    "clube": "Gonzaga",
+    "idade": "19",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzzYZ9xj1g7CAnDDKC-OASdBpef8KVfTznpc_N3iJNqUlZBXrNUQCYslAqcNER8qmhFE&usqp=CAU",
+    "votos": 0,
+    "emails": ""
+  }
+]

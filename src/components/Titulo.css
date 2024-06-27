@@ -1,0 +1,25 @@
+.titulo{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo h1 {
+  color: #654321;
+  margin-bottom: 5px;
+}
+.marcador::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color:  #d6a34a;
+  bottom: 0;
+  left: calc(50% - 50px);
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+
+}
+
+.titulo span {
+  font-size: 20px;
+}

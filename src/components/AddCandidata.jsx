@@ -3,26 +3,32 @@ import { useState } from 'react';
 import './AddCandidata.css';
 import { toast } from 'sonner';
 
+//Criei uma constante para armazenar o nome utilizado para acessar o localStorage, facilitando a manutenção futura se o nome da chave mudar.
+const STORAGE_KEY = 'candidatas';
+
 function AddCandidata() {
   const { register, handleSubmit, reset } = useForm();
-  const [candidatas, setCandidatas] = useState('');
-
-  function cadastrarCandidata(dados) {
-    const candidatas = JSON.parse(localStorage.getItem('candidatas')) || [];
-    candidatas.push({
+  const [candidatas, setCandidatas] = useState(
+    JSON.parse(localStorage.getItem(STORAGE_KEY)) || [],
+  );
+  //Agora, cria uma nova candidata com base nos dados do formulário e concatena essa nova candidata com a lista existente (candidatas) usando o spread operator ....
+  const cadastrarCandidata = (dados) => {
+    const candidata = {
       nome: dados.nome,
       clube: dados.clube,
       idade: dados.idade,
       foto: dados.foto,
       votos: 0,
       emails: '',
-    });
+    };
 
-    setCandidatas(candidatas);
-    localStorage.setItem('candidatas', JSON.stringify(candidatas));
+    const candidatasAtualizadas = [...candidatas, candidata];
+    setCandidatas(candidatasAtualizadas);
+    //Atualiza o localStorage com a lista atualizada de candidatas após adicionar a nova candidata.
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(candidatasAtualizadas));
     toast.success('Ok! Candidata Registrada');
     reset();
-  }
+  };
 
   return (
     <div className="cadastro">

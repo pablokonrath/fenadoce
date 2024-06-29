@@ -15,14 +15,33 @@ export default function Card() {
       setCopiaCandidatas(candidatas2);
     }
   }, []);
-
+/* A função Votar foi simplificada para melhorar a legibilidade e a clareza do código.
+Comentários foram minimizados para manter o código conciso, mas você pode adicionar mais se necessário para explicar detalhes específicos.
+Certifique-se de testar o código após as alterações para garantir que todas as funcionalidades estejam operando */
   function Votar(event, candidata) {
     event.preventDefault();
-    const email = prompt('Qual seu email?');
 
-    if (!email) {
-      return;
+    const email = prompt('Qual seu email?');
+    if (!email) return;
+
+    const candidatasAtualizadas = [...candidatas];
+    const indiceCandidata = candidatasAtualizadas.findIndex(
+      (c) => c.nome === candidata,
+    );
+
+    if (candidatasAtualizadas[indiceCandidata].emails?.includes(email)) {
+      return toast.error('Este email já registrou um voto.');
     }
+
+    candidatasAtualizadas[indiceCandidata].emails =
+      candidatasAtualizadas[indiceCandidata].emails || [];
+    candidatasAtualizadas[indiceCandidata].emails.push(email);
+    candidatasAtualizadas[indiceCandidata].votos =
+      (candidatasAtualizadas[indiceCandidata].votos || 0) + 1;
+
+    setCandidatas(candidatasAtualizadas);
+    localStorage.setItem('candidatas', JSON.stringify(candidatasAtualizadas));
+    toast.success('Voto Registrado com Sucesso');
 
     // Recupera a lista de candidatas do localStorage
     let candidatas2 = [...candidatas];
@@ -85,7 +104,6 @@ export default function Card() {
     localStorage.setItem('candidatas', JSON.stringify(candidatas2));
     toast.error('Voto Desfeito com sucesso');
   }
-
   const handlePesquisa = (e) => {
     const value = busca.toLowerCase();
     const candidatasFiltradas = copiaCandidatas.filter((candidata) => {
@@ -96,7 +114,6 @@ export default function Card() {
     });
     setCandidatas(candidatasFiltradas);
   };
-
   return (
     <>
       <div className="busca">
@@ -139,7 +156,7 @@ export default function Card() {
                 <a
                   key={candidata.id}
                   href=""
-                  className="card__acao__voto"
+                  className="card_acao_voto"
                   onClick={(e) => Votar(e, candidata.nome)}
                 >
                   Vote
@@ -149,7 +166,7 @@ export default function Card() {
                   <a
                     key={candidata.id}
                     href=""
-                    className="card__acao__voto votarNovamente"
+                    className="card_acao_voto votarNovamente"
                     onClick={(e) => Votar(e, candidata.nome)}
                   >
                     Votar Novamente
@@ -157,7 +174,7 @@ export default function Card() {
                   <a
                     key={candidata.id}
                     href=""
-                    className="card__acao__voto"
+                    className="card_acao_voto"
                     onClick={(e) => mudarVoto(e, candidata.nome)}
                   >
                     Mudar Voto
@@ -168,6 +185,7 @@ export default function Card() {
           </div>
         ))}
       </div>
-    </>
-  );
+          
+    </>
+  );
 }

@@ -24,4 +24,5 @@ Titulo.defaultProps = {
   subTitulo: '',
 };
 
+
 export default Titulo;

@@ -29,6 +29,32 @@ export default function Classificacao() {
   const top3 = maisVotadas('top3');
   const top10 = maisVotadas('top10');
 
+  // //troquei o nome da função maisVotadas  para getTopCandidatas para descrever melhor sua funcionalidade.
+  // const getTopCandidatas = (candidatas, top) => {
+
+  //   // Adicionei uma verificação para garantir que o valor de top é válido.
+  //   const validTopValues = ['top3', 'top10'];
+  //   if (!validTopValues.includes(top)) {
+  //     throw new Error(
+  //       `Valor inválido para 'top': ${top}. Valores permitidos: ${validTopValues.join(
+  //         ', ',
+  //       )}`,
+  //     );
+  //   }
+
+  //   // Copia e ordena as candidatas pelo número de votos em ordem decrescente
+  //   const sortedCandidatas = [...candidatas].sort(
+  //     (a, b) => (b.votos || 0) - (a.votos || 0),
+  //   );
+
+  //   // Retorna as 'top' candidatas de acordo com o parâmetro fornecido
+  //   const topCount = top === 'top3' ? 3 : 10;
+  //   return sortedCandidatas.slice(0, topCount);
+  // };
+
+  // const top3 = getTopCandidatas(candidatas, 'top3');
+  // const top10 = getTopCandidatas(candidatas, 'top10');
+
   return (
     <>
       <div className="classificacao" id="classificacao">

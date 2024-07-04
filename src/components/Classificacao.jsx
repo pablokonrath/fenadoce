@@ -12,22 +12,31 @@ export default function Classificacao() {
     }
   }, []);
 
-  //função pra classificar as candidatas
-  //pra nao precisar criar 2 função eu passei um parametro assim pude usar uma função pra 2 classificação top3 e top10
-  const maisVotadas = (top) => {
-    const candidatas2 = [...candidatas];
+    // //troquei o nome da função maisVotadas  para getTopCandidatas para descrever melhor sua funcionalidade.
+    const getTopCandidatas = (candidatas, top) => {
 
-    // Ordena as candidatas pelo número de votos em ordem decrescente
-    candidatas2.sort((a, b) => (b.votos || 0) - (a.votos || 0));
-    if (top == 'top3') {
-      return candidatas2.slice(0, 3);
-    } else if (top == 'top10') {
-      return candidatas2.slice(0, 10);
-    }
-  };
-
-  const top3 = maisVotadas('top3');
-  const top10 = maisVotadas('top10');
+      //   // Adicionei uma verificação para garantir que o valor de top é válido.
+         const validTopValues = ['top3', 'top10'];
+         if (!validTopValues.includes(top)) {
+           throw new Error(
+            `Valor inválido para 'top': ${top}. Valores permitidos: ${validTopValues.join(
+               ', ',
+             )}`,
+          );
+         }
+    
+      //   // Copia e ordena as candidatas pelo número de votos em ordem decrescente
+         const sortedCandidatas = [...candidatas].sort(
+           (a, b) => (b.votos || 0) - (a.votos || 0),
+         );
+    
+      //   // Retorna as 'top' candidatas de acordo com o parâmetro fornecido
+         const topCount = top === 'top3' ? 3 : 10;
+         return sortedCandidatas.slice(0, topCount);
+       };
+    
+       const top3 = getTopCandidatas(candidatas, 'top3');
+       const top10 = getTopCandidatas(candidatas, 'top10');
 
   // //troquei o nome da função maisVotadas  para getTopCandidatas para descrever melhor sua funcionalidade.
   // const getTopCandidatas = (candidatas, top) => {

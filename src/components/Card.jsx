@@ -15,9 +15,7 @@ export default function Card() {
       setCopiaCandidatas(candidatas2);
     }
   }, []);
-/* A função Votar foi simplificada para melhorar a legibilidade e a clareza do código.
-Comentários foram minimizados para manter o código conciso, mas você pode adicionar mais se necessário para explicar detalhes específicos.
-Certifique-se de testar o código após as alterações para garantir que todas as funcionalidades estejam operando */
+  /* A função Votar foi simplificada para melhorar a legibilidade e a clareza do código.Utilizei os operadores como ?. e || assim consegui torna o código mais conciso e direto, reduzindo a complexidade e eliminando verificações desnecessárias. Isso não apenas facilita a compreensão do código, mas também minimiza o risco de erros. */
   function Votar(event, candidata) {
     event.preventDefault();
 
@@ -42,35 +40,6 @@ Certifique-se de testar o código após as alterações para garantir que todas 
     setCandidatas(candidatasAtualizadas);
     localStorage.setItem('candidatas', JSON.stringify(candidatasAtualizadas));
     toast.success('Voto Registrado com Sucesso');
-
-    // Recupera a lista de candidatas do localStorage
-    let candidatas2 = [...candidatas];
-
-    const indice = candidatas2.findIndex((x) => x.nome === candidata);
-
-    // Verifica se o email já foi registrado para essa candidata
-    if (
-      candidatas2[indice].emails &&
-      candidatas2[indice].emails.includes(email)
-    ) {
-      return toast.error('Este email já registrou um voto.');
-    }
-
-    // Adiciona o email ao array de emails
-    if (!candidatas2[indice].emails) {
-      candidatas2[indice].emails = [];
-    }
-    candidatas2[indice].emails.push(email);
-
-    // soma os votos
-    if (!candidatas2[indice].votos) {
-      candidatas2[indice].votos = 0;
-    }
-    candidatas2[indice].votos += 1;
-    toast.success('Voto Registrado com Sucesso');
-
-    setCandidatas(candidatas2);
-    localStorage.setItem('candidatas', JSON.stringify(candidatas2));
   }
 
   function mudarVoto(event, candidata) {
@@ -185,7 +154,7 @@ Certifique-se de testar o código após as alterações para garantir que todas 
           </div>
         ))}
       </div>
-          
-    </>
-  );
+               
+    </>
+  );
 }

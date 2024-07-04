@@ -90,7 +90,7 @@ Depois
 #
 
 Antes
-![Teste de Multiplicação](public/felipe-depois.jpg)
+![Teste de Multiplicação](public/felipe-antes.jpg)
 
 Depois
 
@@ -104,4 +104,10 @@ Depois
 
 Antes
 
+![Teste de Multiplicação](public/john-antes.jpg)
+
 Depois
+
+![Teste de Multiplicação](public/john-depois.jpg)
+
+Obs: Cada participante do projeto realizou as atividades proposta no trabalho 2
